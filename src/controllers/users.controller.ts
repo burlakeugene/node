@@ -9,11 +9,11 @@ class Controller {
       [name]
     );
 
-    res.json(result.rows[0]);
+    res.status(200).json(result.rows[0]);
   }
   async get(req: any, res: any) {
     const result = await db.query('SELECT * from users');
-    res.json(result.rows);
+    res.status(200).json(result.rows);
   }
 }
 
